@@ -7,25 +7,14 @@ import { FormGroup, FormControl ,Validators } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  
-nameForm: FormGroup;
-
+  model = {
+    firstname:"",
+    lastname:""
+  }
   constructor() { }
 
   ngOnInit() {
-    this.nameForm = new FormGroup({
-    firstname: new FormControl('',{
-      validators:Validators.required,
-      updateOn:'change'
+  }
 
-    }),
-    lastname: new FormControl('',{
-      validators:Validators.required,
-      updateOn:'change'
-
-    })
-  });
-
-}
 }
 
